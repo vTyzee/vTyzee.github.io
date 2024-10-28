@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Ratings</title>
+    <meta name="description" content="CineBase - a portal about movies">
+    <meta name="keywords" content="movies, online movies, HD">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="logo_text">
+                <h1><a href="index eng.html">CineBase</a></h1>
+                <h2>Movies are our passion!</h2>
+            </div>
+        </div>
+
+        <nav class="menubar">
+            <ul class="menu">
+                <li><a href="index eng.html">Home</a></li>
+                <li><a href="films eng.html">Movies</a></li>
+                <li><a href="serials eng.html">TV Shows</a></li>
+                <li class="selected"><a href="rating eng.html">Movie Ratings</a></li>
+                <li><a href="contact eng.html">Contact</a></li>
+                <li class="selected"><a href="rating.html">ru</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="site_content">
+        <aside class="sidebar_container">
+            <section class="sidebar">
+                <h2>Search</h2>
+                <form method="post" action="#" id="search_form">
+                    <input type="search" name="search_field" placeholder="your query" />
+                    <input type="submit" class="btn" value="Search" />
+                </form>
+            </section>
+
+            <section class="sidebar">
+                <h2>Login</h2>
+                <form method="post" action="#" id="login">
+                    <input type="text" name="login_field" placeholder="username" required />
+                    <input type="password" name="password_field" placeholder="password" required />
+                    <input type="submit" class="btn" value="Login" />
+                    <div class="labels_passreg_text">
+                        <span><a href="#">Forgot password?</a></span> | <span><a href="#">Register</a></span>
+                    </div>
+                </form>
+            </section>
+
+            <section class="sidebar">
+                <h2>News</h2>
+                <span>31.02.2018</span>
+                <p>We launched an advanced search</p>
+                <a href="#">Read</a>
+            </section>
+
+            <section class="sidebar">
+                <h2>Movie Ratings</h2>
+                <ul>
+                    <li><a href="show eng.html">Interstellar</a><span class="rating_sidebar"> 8.1</span></li>
+                    <li><a href="matrix eng.html">The Matrix</a><span class="rating_sidebar"> 8.0</span></li>
+                    <li><a href="max eng.html">Mad Max</a><span class="rating_sidebar"> 7.5</span></li>
+                    <li><a href="cloud eng.html">Cloud Atlas</a><span class="rating_sidebar"> 7.4</span></li>
+                </ul>
+            </section>
+        </aside>
+
+        <section class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Movie</th>
+                        <th class="center">Year</th>
+                        <th class="center">Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center"><img src="inter.png" alt="Interstellar"></td>
+                        <td>1. <a href="show eng.html">Interstellar</a></td>
+                        <td class="center">2014</td>
+                        <td class="center rating">8.1</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><img src="matrix.png" alt="The Matrix"></td>
+                        <td>2. <a href="matrix eng.html">The Matrix</a></td>
+                        <td class="center">1999</td>
+                        <td class="rating center">8.0</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><img src="max.png" alt="Mad Max"></td>
+                        <td>3. <a href="max eng.html">Mad Max</a></td>
+                        <td class="center">2015</td>
+                        <td class="rating center">7.5</td>
+                    </tr>
+                    <tr>
+                        <td class="center"><img src="cloud.png" alt="Cloud Atlas"></td>
+                        <td>4. <a href="cloud eng.html">Cloud Atlas</a></td>
+                        <td class="center">2013</td>
+                        <td class="rating center">7.4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>
+            <a href="index eng.html">Home</a> |
+            <a href="films eng.html">Movies</a> |
+            <a href="serials eng.html">TV Shows</a> |
+            <a href="rating eng.html">Movie Ratings</a> |
+            <a href="contact eng.html">Contact</a>
+        </p>
+        <p>kinopoisk.ru</p>
+    </footer>
+</body>
+</html>
