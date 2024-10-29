@@ -8,13 +8,13 @@ html {
     font-family: 'Roboto', sans-serif;
     font-size: 50px;
     text-align: center;
-    color: #ffffff;
-    background: #27353f;
+    color: #852020;
+    background: #66ff00;
 }
 
 .container {
     min-height: 800px;
-    background: url('jmg.jpg') center/cover no-repeat;
+    background: url('gradient-abstract-background_23-2149115478.avif') center/cover no-repeat;
 }
 
 .my_projects {
@@ -23,9 +23,9 @@ html {
 }
 
 .my_projects a {
-    color: #39bedc;
+    color: #ff0062;
 }
 
 #mailme {
-    color: aliceblue;
+    color: rgb(167, 0, 153); /* Fixed typo from "laliceblue" */
 }
