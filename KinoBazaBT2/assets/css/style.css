@@ -1,0 +1,242 @@
+/* Общий стиль для ссылок */
+.header a,
+a:hover {
+    color: #f0ad4e;
+    text-decoration: none;
+}
+
+/* Заголовок и подзаголовок */
+.header h1 {
+    letter-spacing: 8px; /* Более читабельный межбуквенный интервал */
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.header p {
+    color: #fff !important;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-top: 0.5rem;
+}
+
+/* Навигационная панель */
+.nav-pills .nav-link.active {
+    color: #fff;
+    background-color: #346270;
+}
+
+.nav-pills .nav-link {
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #234a59;
+}
+
+.navbar {
+    padding: 1rem;
+    border-radius: 0;
+    background-color: #222;
+}
+
+/* Адаптивные настройки для навигации */
+@media (max-width: 767px) {
+    .nav-pills {
+        justify-content: center;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+        letter-spacing: 5px;
+    }
+
+    .header {
+        text-align: center;
+    }
+}
+
+/* Основной контейнер */
+.wrapper {
+    min-height: 100%;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для изображений фильмов */
+.films_block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; /* Расстояние между элементами */
+    text-align: center;
+}
+
+.films_block img {
+    border-radius: 0.5rem;
+    border: 3px solid #dad7d5;
+    transition: transform 0.3s ease-in-out;
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.films_block img:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
+    z-index: 2;
+}
+
+.films_block.series img:hover {
+    transform: rotate(10deg) scale(1.05);
+}
+
+/* Стили карточек */
+.card-img-top {
+    height: auto; /* Автоматическая высота для адаптивности */
+    width: 100%;
+}
+
+.card {
+    border: none;
+}
+
+.card-body {
+    background-color: #f9f9f9;
+    padding: 1rem;
+}
+
+.card-header {
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+}
+
+/* Установка размера изображений в карточках */
+.card-img-top {
+    width: 350px; /* Изображение занимает всю ширину карточки */
+    height: 200px; /* Высота фиксируется для ровного вида */
+    border-radius: 5px; /* Добавим закругление */
+}
+
+/* Заголовки карточек */
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Кнопки "Подробнее" */
+.card .btn {
+    background-color: #f0ad4e; /* Оранжевый цвет */
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card .btn:hover {
+    background-color: #d99433; /* Темнее при наведении */
+    color: #fff;
+}
+
+/* Отступы для секций */
+section {
+    margin-bottom: 2rem;
+}
+
+/* Сайдбар: Равномерные отступы для блоков */
+aside .card {
+    margin-bottom: 1.5rem;
+}
+
+/* Метки и бейджи */
+.list-group-item {
+    background-color: #f9f9f9;
+}
+
+.badge {
+    background-color: #000;
+    font-size: 0.9rem;
+}
+
+.info-block {
+    font-size: 1.25rem;
+}
+
+.info-block .badge {
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+}
+
+/* Текстовые поля */
+textarea.form-control {
+    height: 200px;
+    resize: none; /* Запрет изменения размера */
+}
+
+/* Таблицы */
+.table tbody > tr > td {
+    vertical-align: middle;
+}
+
+/* Подвал */
+footer {
+    color: #666;
+    background: #222;
+    padding: 1rem 0;
+    border-top: 1px solid #000;
+    text-align: center;
+}
+
+footer a {
+    color: #999;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #efefef;
+}
+
+/* Адаптивные стили для фильмов */
+@media (max-width: 768px) {
+    .films_block img {
+        width: 150px;
+        height: 180px;
+    }
+
+    .films_block img:nth-child(1),
+    .films_block img:nth-child(2) {
+        width: 200px;
+        height: 300px;
+    }
+
+    .films_block img:hover {
+        transform: scale(1.12);
+        z-index: 1;
+    }
+
+    /* Стиль для изображений телефонов */
+.new-phones img {
+    width: 100%; /* Ширина изображения равна ширине колонки */
+    max-width: 325px; /* Ограничение на максимальную ширину */
+    height: auto; /* Автоматическая высота */
+    display: block; /* Центрируем изображение */
+    margin: 0 auto; /* Горизонтальное выравнивание по центру */
+    object-fit: cover; /* Чтобы изображение занимало всю область */
+    border-radius: 8px; /* Радиус для закругленных углов */
+}
+}
+
+/* Адаптивность для изображений в карточках */
+@media (max-width: 576px) {
+    .card-img-top {
+        width: 100%;
+        height: auto;
+    }
+}
