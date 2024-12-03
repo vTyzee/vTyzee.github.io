@@ -1,54 +1,48 @@
-/* Общий стиль для ссылок */
-.header a,
-a:hover {
+.header a, a:hover {
     color: #f0ad4e;
     text-decoration: none;
 }
 
-/* Заголовок и подзаголовок */
 .header h1 {
-    letter-spacing: 8px; /* Более читабельный межбуквенный интервал */
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    margin: 0;
+    letter-spacing: 15px;
+    font-size: 300%;
 }
 
 .header p {
-    color: #fff !important;
-    font-size: 1rem;
-    letter-spacing: 2px;
-    margin-top: 0.5rem;
+    color: white !important;
+    font-size: 90%;
+    letter-spacing: 3px;
 }
 
-/* Навигационная панель */
-.nav-pills .nav-link.active {
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
     color: #fff;
     background-color: #346270;
 }
 
-.nav-pills .nav-link {
+.nav-pills>li>a {
     color: #fff;
-    transition: background-color 0.3s ease-in-out;
 }
 
-.nav-pills .nav-link:hover {
-    background-color: #234a59;
+.nav-pills>li>a:hover {
+    background-color: #346270;
 }
 
-.navbar {
-    padding: 1rem;
+.navbar-inverse {
+    padding: 1%;
     border-radius: 0;
-    background-color: #222;
 }
 
-/* Адаптивные настройки для навигации */
 @media (max-width: 767px) {
+    .nav-pills>li {
+        float: none;
+    }
+
     .nav-pills {
-        justify-content: center;
+        text-align: center
     }
 
     .header h1 {
-        font-size: 2rem;
+        font-size: 280%;
         letter-spacing: 5px;
     }
 
@@ -57,186 +51,155 @@ a:hover {
     }
 }
 
-/* Основной контейнер */
+.clear {
+    clear: both;
+    height: 63px;
+}
+    
 .wrapper {
     min-height: 100%;
 }
 
-html,
-body {
+html, body {
     height: 100%;
-    margin: 0;
-    padding: 0;
 }
 
-/* Стили для изображений фильмов */
+.films_block{
+    text-align: center;
+}
+
 .films_block {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem; /* Расстояние между элементами */
     text-align: center;
 }
 
 .films_block img {
-    border-radius: 0.5rem;
-    border: 3px solid #dad7d5;
-    transition: transform 0.3s ease-in-out;
-    width: 180px;
-    height: 220px;
-    object-fit: cover;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    border: solid 5px #dad7d5;
+    transition: transform 0.3s ease; /* Smooth transition */
+    width: 150px; /* Ширина квадрата */
+    height: 175px; /* Высота квадрата */
+}
+
+.films_block img:first-child, 
+.films_block img:nth-child(2) {
+    width: 180px; /* Увеличиваем ширину для первых двух фильмов */
+    height: 250px; /* Пропорционально увеличиваем высоту */
+    margin-bottom: 20px; /* Дополнительное расстояние снизу */
 }
 
 .films_block img:hover {
-    transform: scale(1.1); /* Увеличение при наведении */
-    z-index: 2;
+    transform: scale(1.12); /* Slightly enlarges the image on hover */
+}
+
+.films_block.series img {
+    margin-bottom: 5%;
+    border-radius: 5px;
+    border: solid 5px #dad7d5;
+    transition: transform 0.3s ease;
 }
 
 .films_block.series img:hover {
-    transform: rotate(10deg) scale(1.05);
+    transform: rotate(12deg) scale(1.05); /* Rotate and slightly enlarge on hover */
 }
 
-/* Стили карточек */
-.card-img-top {
-    height: auto; /* Автоматическая высота для адаптивности */
-    width: 100%;
+.film_label {
+    padding: 5%;
+    margin-bottom: 35%;
 }
 
-.card {
+.margin-8 {
+    margin-top: 8%;
+}
+
+.panel {
     border: none;
 }
 
-.card-body {
+.panel-body {
     background-color: #f9f9f9;
-    padding: 1rem;
 }
 
-.card-header {
+.panel-info>.panel-heading {
     background-color: #f0ad4e;
     color: white;
-    border: none;
+    border-color: transparent;
 }
 
-/* Установка размера изображений в карточках */
-.card-img-top {
-    width: 350px; /* Изображение занимает всю ширину карточки */
-    height: 200px; /* Высота фиксируется для ровного вида */
-    border-radius: 5px; /* Добавим закругление */
+.sitebar-header{
+    font-size: 120%;
+    letter-spacing: 2px;
 }
 
-/* Заголовки карточек */
-.card-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
+.form-control {
+    border-radius: 0px;
 }
 
-/* Кнопки "Подробнее" */
-.card .btn {
-    background-color: #f0ad4e; /* Оранжевый цвет */
-    color: #fff;
-    font-weight: bold;
-    transition: background-color 0.3s ease-in-out;
+.input-lg {
+    font-size: 14px
 }
 
-.card .btn:hover {
-    background-color: #d99433; /* Темнее при наведении */
-    color: #fff;
-}
-
-/* Отступы для секций */
-section {
-    margin-bottom: 2rem;
-}
-
-/* Сайдбар: Равномерные отступы для блоков */
-aside .card {
-    margin-bottom: 1.5rem;
-}
-
-/* Метки и бейджи */
-.list-group-item {
+.list-group-item-warning {
+    color: #8a6d3b;
     background-color: #f9f9f9;
 }
 
 .badge {
-    background-color: #000;
-    font-size: 0.9rem;
+    background-color: #000000;
 }
 
 .info-block {
-    font-size: 1.25rem;
+    font-size: 120%;
 }
 
 .info-block .badge {
-    font-size: 0.9rem;
-    margin-right: 0.5rem;
+    font-size: 80%;
 }
 
-/* Текстовые поля */
+.info-block span{
+    margin-right: 3%;
+}
+
 textarea.form-control {
     height: 200px;
-    resize: none; /* Запрет изменения размера */
 }
 
-/* Таблицы */
-.table tbody > tr > td {
+.table tbody>tr>td.vert-alligng {
     vertical-align: middle;
 }
 
-/* Подвал */
 footer {
     color: #666;
     background: #222;
-    padding: 1rem 0;
+    padding: 17px 0 18px 0;
     border-top: 1px solid #000;
-    text-align: center;
 }
 
 footer a {
     color: #999;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
 }
 
 footer a:hover {
     color: #efefef;
 }
 
-/* Адаптивные стили для фильмов */
 @media (max-width: 768px) {
     .films_block img {
-        width: 150px;
-        height: 180px;
+        width: 150px; /* Все фильмы одного размера на узком экране */
+        height: 175px;
     }
 
     .films_block img:nth-child(1),
     .films_block img:nth-child(2) {
-        width: 200px;
-        height: 300px;
-    }
+        width: 280px; /* Первые два фильма всегда остаются большими */
+        height: 460px;
+        transform: scale(1.12); /* Slightly enlarges the image on hover */
 
+        
+    }
     .films_block img:hover {
-        transform: scale(1.12);
-        z-index: 1;
-    }
-
-    /* Стиль для изображений телефонов */
-.new-phones img {
-    width: 100%; /* Ширина изображения равна ширине колонки */
-    max-width: 325px; /* Ограничение на максимальную ширину */
-    height: auto; /* Автоматическая высота */
-    display: block; /* Центрируем изображение */
-    margin: 0 auto; /* Горизонтальное выравнивание по центру */
-    object-fit: cover; /* Чтобы изображение занимало всю область */
-    border-radius: 8px; /* Радиус для закругленных углов */
-}
-}
-
-/* Адаптивность для изображений в карточках */
-@media (max-width: 576px) {
-    .card-img-top {
-        width: 100%;
-        height: auto;
+        transform: scale(1.15); /* Увеличивает изображение на 10% */
+        z-index: 1; /* Поднимает изображение выше других элементов */
     }
 }
+

@@ -2,14 +2,12 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Рейтинг телефонов</title>
+    <title>Рейтинг фильмов</title>
 
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Main Style -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -17,149 +15,198 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">ТелефонБаза</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                        <li class="nav-item"><a class="nav-link" href="phones.html">Телефоны</a></li>
-                        <li class="nav-item"><a class="nav-link" href="chexli.html">Чехлы</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="rating.html">Рейтинг телефонов</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
-                        <li class="nav-item"><a class="nav-link" href="rating_en.html">English</a></li>
-                    </ul>
-                </div>
+        <div class="container-fluid">
+            <div class="row">
+
+                <nav role="navigation" class="navbar navbar-inverse">
+                    <div class="container">
+
+                        <div class="navbar-header header">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h1><a href="index.html">КиноБаза</a></h1>
+                                        <p>Кино - наша страсть!</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div id="navbarCollapse" class="collapse navbar-collapse navbar-right">
+                            <ul class="nav nav-pills">
+                                <li> <a href="index.html">Главная</a> </li>
+                                <li> <a href="films.html">Фильмы</a> </li>
+                                <li> <a href="series.html">Сериалы</a> </li>
+                                <li class="active"> <a href="rating.html">Рейтинг фильмов</a> </li>
+                                <li> <a href="contact.html">Контакты</a> </li>
+                                <li><a href="rating_en.html">English</a>
+                            </ul>
+                        </div>
+
+                    </div>
+                </nav>
+
             </div>
-        </nav>
+        </div>
     </header>
 
     <main>
-        <div class="container py-4">
-            <div class="row">
-                <!-- Main Content -->
-                <section class="col-lg-9">
-                    <h1>Рейтинг телефонов</h1>
-                    <hr>
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <section class="col-lg-9 col-lg-push-3"> <!-- Меняем блоки местами col-lg-push-3 -->
 
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th class="text-center">Телефон</th>
-                                <th class="text-center">Год</th>
-                                <th class="text-center">Рейтинг</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col-lg-1">
-                                    <img class="img-fluid img-thumbnail" src="assets/img/iphone15.png" alt="Айфон 15">
-                                </td>
-                                <td class="align-middle text-center"><a href="iphone15.html">Айфон 15</a></td>
-                                <td class="align-middle text-center">2023</td>
-                                <td class="align-middle text-center"><span class="badge bg-dark text-white">9.5</span></td>
-                            </tr>
-                            <tr>
-                                <td class="col-lg-1">
-                                    <img class="img-fluid img-thumbnail" src="assets/img/vivox100ultra.png" alt="Виво Х100 Ультра">
-                                </td>
-                                <td class="align-middle text-center"><a href="vivox100ultra.html">Виво Х100 Ультра</a></td>
-                                <td class="align-middle text-center">2023</td>
-                                <td class="align-middle text-center"><span class="badge bg-dark text-white">9.3</span></td>
-                            </tr>
-                            <tr>
-                                <td class="col-lg-1">
-                                    <img class="img-fluid img-thumbnail" src="assets/img/samsungs24ultra.png" alt="Самсунг S24 Ультра">
-                                </td>
-                                <td class="align-middle text-center"><a href="samsungs24ultra.html">Самсунг S24 Ультра</a></td>
-                                <td class="align-middle text-center">2024</td>
-                                <td class="align-middle text-center"><span class="badge bg-dark text-white">9.1</span></td>
-                            </tr>
-                            <tr>
-                                <td class="col-lg-1">
-                                    <img class="img-fluid img-thumbnail" src="assets/img/redminote13.png" alt="Редми Ноут 13">
-                                </td>
-                                <td class="align-middle text-center"><a href="redminote13.html">Редми Ноут 13</a></td>
-                                <td class="align-middle text-center">2023</td>
-                                <td class="align-middle text-center"><span class="badge bg-dark text-white">8.9</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                </section>
-
-                <!-- Sidebar -->
-                <aside class="col-lg-3">
-                    <div class="card mb-4 d-none d-md-block">
-                        <div class="card-header">Поиск</div>
-                        <div class="card-body">
-                            <form>
+                        <form role="search" class="visible-xs">
+                            <div class="form-group">
                                 <div class="input-group">
-                                    <input type="search" class="form-control" placeholder="Ваш запрос">
-                                    <button class="btn btn-outline-secondary" type="submit"><i class="bi bi-search"></i></button>
+                                    <input type="search" class="form-control input-lg" placeholder="Ваш запрос">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default btn-lg" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                    </div>
                                 </div>
-                            </form>
-                        </div>
-                    </div>
+                            </div>
+                        </form>
 
-                    <div class="card mb-4">
-                        <div class="card-header">Вход</div>
-                        <div class="card-body">
-                            <form>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Логин">
-                                </div>
-                                <div class="mb-3">
-                                    <input type="password" class="form-control" placeholder="Пароль">
-                                </div>
-                                <button type="submit" class="btn btn-warning w-100">Вход</button>
-                            </form>
-                        </div>
-                    </div>
+                        <h1>Рейтинг фильмов</h1>
+                        <hr>
 
-                    <div class="card mb-4">
-                        <div class="card-header">Новости</div>
-                        <div class="card-body">
-                            <p>31.02.2024</p>
-                            <p>Мы обновили рейтинг телефонов!</p>
-                        </div>
-                    </div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="text-center">Фильм</th>
+                                    <th class="text-center">Год</th>
+                                    <th class="text-center">Рейтинг</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-lg-1 col-md-1 col-xs-2">
+                                        <img class="img-responsive img-thumbnail" src="assets/img/inter.png" alt="интерстеллар">
+                                    </td>
+                                    <td class="vert-align"><a href="show.html">Интерстеллар</a></td>
+                                    <td class="text-center vert-align">2014</td>
+                                    <td class="text-center vert-align"><span class="badge">8.1</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-lg-1 col-md-1 col-xs-2">
+                                        <img class="img-responsive img-thumbnail" src="assets/img/cloud.png" alt="облачный атлас">
+                                    </td>
+                                    <td class="vert-align"><a href="cloud.html">Облачный атлас</a></td>
+                                    <td class="text-center vert-align">2012</td>
+                                    <td class="text-center vert-align"><span class="badge">8.0</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-lg-1 col-md-1 col-xs-2">
+                                        <img class="img-responsive img-thumbnail" src="assets/img/matrix.png" alt="матрица">
+                                    </td>
+                                    <td class="vert-align"><a href="matrix.html">Матрица</a></td>
+                                    <td class="text-center vert-align">1999</td>
+                                    <td class="text-center vert-align"><span class="badge">7.9</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-lg-1 col-md-1 col-xs-2">
+                                        <img class="img-responsive img-thumbnail" src="assets/img/max.png" alt="безумный макс">
+                                    </td>
+                                    <td class="vert-align"><a href="max.html">Безумный макс</a></td>
+                                    <td class="text-center vert-align">2015</td>
+                                    <td class="text-center vert-align"><span class="badge">7.8</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                    <div class="card mb-3">
-                        <div class="card-header">Рейтинг телефонов</div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <span class="badge bg-dark text-white">8.9</span>
-                                <a href="iphone15.html">Айфон 15</a>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="badge bg-dark text-white">8.7</span>
-                                <a href="redminote13.html">Редми ноут 13</a>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="badge bg-dark text-white">8.3</span>
-                                <a href="vivox100ultra.html">Виво Х100 ультра</a>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="badge bg-dark text-white">8.1</span>
-                                <a href="samsungs24ultra.html">Самсунг с24 ультра</a>
-                            </li>
-                        </ul>
-                    </div>
-                </aside>
+                        <div class="margin-8 clear"></div>
+
+                    </section>
+
+                    <aside class="col-lg-3 col-lg-pull-9"> <!-- Меняем блоки местами col-lg-pull-9 -->
+
+                        <div class="panel panel-info hidden-xs">
+                            <div class="panel-heading"><div class="sidebar-header">Поиск</div></div>
+                            <div class="panel-body">
+                                <form role="search">
+                                    <div class="form-group">
+                                        <input type="search" class="form-control input-lg" placeholder="Ваш запрос">
+                                    </div>
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default btn-lg" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-info">
+                            <div class="panel-heading"><div class="sidebar-header">Вход</div></div>
+                            <div class="panel-body">
+                                <form role="form">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control input-lg" placeholder="Логин">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control input-lg" placeholder="Пароль">
+                                    </div>
+                                    <button type="submit" class="btn btn-warning pull-right">вход</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-info">
+                            <div class="panel-heading"><div class="sidebar-header">Новости</div></div>
+                            <div class="panel-body">
+                                <p>31.02.2017</p>
+                                <p>Мы запустили новый сервис</p>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-info">
+                            <div class="panel-heading"><div class="sidebar-header">Рейтинг фильмов</div></div>
+                            <div class="panel-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item list-group-warning">
+                                        <span class="badge">8.9</span>
+                                        <a href="show.html">Интерстеллар</a>
+                                    </li>
+                                    <li class="list-group-item list-group-warning">
+                                        <span class="badge">8.7</span>
+                                        <a href="max.html">Безумный макс</a>
+                                    </li>
+                                    <li class="list-group-item list-group-warning">
+                                        <span class="badge">8.3</span>
+                                        <a href="matrix.html">Матрица</a>
+                                    </li>
+                                    <li class="list-group-item list-group-warning">
+                                        <span class="badge">8.1</span>
+                                        <a href="cloud.html">Облачный атлас</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </aside>
+
+                </div>
+
             </div>
+
         </div>
+
     </main>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2023 ТелефонБаза. Все права защищены. <a href="index.html" class="text-white text-decoration-underline">ТелефонБаза</a></p>
+    <footer>
+        <div class="container">
+            <p class="text-center"> <a href="https://www.kinopoisk.ru/">KinoBaza</a> </p>
+        </div>
     </footer>
 
-    <!-- Bootstrap Bundle JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>

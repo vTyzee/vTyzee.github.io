@@ -28,7 +28,7 @@ header {
     text-align: center;
     background-color: rgba(50, 53, 63, 0.6); /* Прозрачный фон для читаемости */
     font-size: 2em;
-    color: #ff574c;
+    color: #3ae9bd;
 }
 
 /* Основной раздел */
@@ -40,7 +40,7 @@ main {
 /* Карточки проектов */
 .card {
     background-color: rgba(39, 53, 63, 0.9);
-    border: 1px solid #ff574c;
+    border: 1px solid #6751ca;
     border-radius: 10px;
     color: #ffffff;
     transition: transform 0.2s;
@@ -51,7 +51,7 @@ main {
 }
 
 .card-title {
-    color: #ff574c;
+    color: #7ee4b4;
 }
 
 .card-text {
@@ -59,13 +59,13 @@ main {
 }
 
 .card a.btn-primary {
-    background-color: #ff574c;
-    border-color: #ff574c;
+    background-color: #4237a7;
+    border-color: #4237a7;
 }
 
 .card a.btn-primary:hover {
-    background-color: #ff776c;
-    border-color: #ff776c;
+    background-color: #378035;
+    border-color: #917e7d;
 }
 
 /* Footer */
