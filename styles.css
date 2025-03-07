@@ -1,161 +1,187 @@
-/* Общие стили */
+/* Сброс базовых отступов/полей и box-sizing */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Стиль для HTML и Body */
+/* Базовые стили для html и body */
 html, body {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px; /* Уменьшено для лучшей адаптивности */
+    font-size: 16px;
     color: #ffffff;
-    background: #27353f;
-    height: 100%; /* Важный элемент для Flexbox */
-    margin: 0;
-    padding: 0;
-    display: flex; /* Flexbox для фиксации футера */
-    flex-direction: column; /* Устанавливаем вертикальное направление */
-    background-image: url('photoforwallpappers.png'); /* Картинка для ПК */
+
+    /* Градиентный оверлей + картинка */
+    background: linear-gradient(
+                  to top right, 
+                  rgba(39, 53, 63, 0.8), 
+                  rgba(50, 53, 63, 0.8)
+                ),
+                url('photoforwallpappers.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
 }
 
-/* Header стили */
+/* Выделяем заголовки другой семьёй шрифтов (Montserrat) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Шапка сайта (header) */
 header {
-    padding: 20px;
-    text-align: center;
-    background-color: rgba(50, 53, 63, 0.6); /* Прозрачный фон для читаемости */
-    font-size: 2em;
-    color: #3ae9bd;
+    background-color: transparent;
 }
 
-/* Основной раздел */
+header h1 {
+    color: #3ae9bd;
+    text-shadow: 0 0 8px rgba(58, 233, 189, 0.7), 
+                 0 0 15px rgba(58, 233, 189, 0.5);
+    /* Небольшая анимация появления */
+    animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Основная часть (main) тянется на всё оставшееся пространство */
 main {
+    flex: 1; 
     padding: 20px;
-    flex: 1; /* Этот элемент занимает оставшееся пространство */
 }
 
 /* Карточки проектов */
-.card {
-    background-color: rgba(39, 53, 63, 0.9);
-    border: 1px solid #6751ca;
+.project-card {
+    background-color: rgba(39, 53, 63, 0.5);  /* полупрозрачный фон */
+    backdrop-filter: blur(5px);               /* эффект размытия фона */
+    border: 1px solid #3ae9bd;
     border-radius: 10px;
     color: #ffffff;
-    transition: transform 0.2s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-height: 220px;
 }
 
-.card:hover {
+.project-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(58, 233, 189, 0.2);
 }
 
-.card-title {
+.project-card .card-title {
     color: #7ee4b4;
+    margin-bottom: 0.75rem;
 }
 
-.card-text {
+.project-card .card-text {
     color: #ffffff;
+    margin-bottom: 1rem;
 }
 
-.card a.btn-primary {
-    background-color: #4237a7;
-    border-color: #4237a7;
+/* Кнопки */
+.btn-primary {
+    background: linear-gradient(
+                to bottom right, 
+                #3ae9bd, 
+                #2fc99a
+               );
+    border: none;
+    color: #27353f;
+    transition: background 0.3s, transform 0.3s;
 }
 
-.card a.btn-primary:hover {
-    background-color: #378035;
-    border-color: #917e7d;
+.btn-primary:hover {
+    background: linear-gradient(
+                to bottom right, 
+                #4df1c9, 
+                #3fddab
+               );
+    transform: translateY(-2px);
 }
 
-/* Footer */
+/* Футер */
 footer {
-    background: transparent !important; /* Убираем серый цвет полностью */
-    color: #ffffff; /* Белый цвет текста */
+    color: #ffffff;
     text-align: center;
-    padding: 1.5rem; /* Увеличиваем отступы */
-    font-size: 1.1em; /* Увеличиваем размер текста */
     margin-top: auto;
-    position: relative; /* Изменено с absolute */
-    bottom: auto; /* Убираем фиксированное положение */
     width: 100%;
-    z-index: 10;
+    position: relative;
+    background: rgba(39, 53, 63, 0.7);
+    backdrop-filter: blur(3px);
 }
 
-/* Ссылки в футере */
-footer a {
-    color: #ff574c;
-    text-decoration: none;
-    font-size: 1.2em; /* Увеличиваем размер ссылки */
+footer p {
+    font-size: 1.1rem;
 }
 
-footer a:hover {
-    color: #ff776c;
-    text-decoration: underline;
+footer a#mailme {
+    font-size: 1.1em;
+    border-color: #ffffff;
+    color: #ffffff;
+    transition: background 0.3s, color 0.3s;
 }
 
-/* Адаптивность */
+footer a#mailme:hover {
+    background-color: #ffffff;
+    color: #27353f;
+}
+
+/* Адаптивные правила */
 @media (max-width: 768px) {
     html, body {
-        background-image: none; /* Убираем фон на мобильной версии */
-        background-color: #27353f; /* Устанавливаем однотонный цвет вместо картинки */
+        background-image: none; 
+        background-color: #27353f;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
     }
 
     footer {
-        font-size: 1.2em; /* Еще больше увеличиваем текст на мобильных */
-        padding: 1.5rem; /* Сохраняем отступы для гармоничности */
-        background: transparent !important; /* Полностью убираем серый цвет */
+        font-size: 1.2em;
     }
 }
 
 @media (max-width: 480px) {
     html, body {
-        font-size: 14px; /* Уменьшение базового размера шрифта на очень маленьких экранах */
-        background-image: none; /* Убираем фон на очень маленьких экранах */
-        background-color: #27353f; /* Цвет фона для мобильных устройств */
+        font-size: 14px;
+        background-image: none;
+        background-color: #27353f;
     }
 
-    header {
-        font-size: 1.2em;
-        padding: 10px;
+    header h1 {
+        font-size: 1.3rem;
+        margin: 10px 0;
     }
 
     main {
         padding: 10px;
     }
 
-    footer {
-        font-size: 1em;
-        padding: 0.5rem;
-        background: transparent !important; /* Прозрачность аналогична десктопной версии */
+    .project-card {
+        margin-bottom: 20px; 
     }
 
-    .card-title {
-        font-size: 1.2em;
+    .project-card .card-title {
+        font-size: 1.1rem;
     }
 
-    .card a.btn-primary {
+    .btn-primary {
         padding: 6px 12px;
     }
-}
 
-/* Карточки проектов */
-@media (max-width: 768px) {
-    .card {
-        max-width: 100%; /* Карточки занимают всю ширину на мобильных */
-        padding: 10px;
-        margin-bottom: 20px; /* Добавляем отступ снизу между карточками */
-    }
-
-    .card-title {
-        font-size: 1.3em;
-    }
-
-    .card-text {
-        margin-bottom: 10px;
-    }
-
-    .card a.btn-primary {
-        padding: 8px 16px;
+    footer {
+        font-size: 1rem;
+        padding: 0.5rem;
     }
 }
