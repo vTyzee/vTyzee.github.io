@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Java Courses</title>
+  <!-- Подключаем шрифт Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <!-- Подключаем внешний файл стилей (style.css) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Первый блок (Hero) -->
+  <div class="hero">
+    <!-- Кнопка переключения на эстонский (ведёт на index_est.html) -->
+    <a href="index_est.html" class="lang-btn">Estonian</a>
+
+    <!-- Центрированный контент -->
+    <div class="hero-content">
+      <h1 class="hero-title">Learn to code with us</h1>
+      <p class="hero-subtitle">Java Courses<br>Professional tutors, famous people and companies</p>
+      
+      <a href="#" class="btn-primary">Sign up for courses</a>
+      
+      <!-- Блок "Learn more" прямо под кнопкой -->
+      <div class="learn-more">
+        <a href="#features">Learn more about SchoolOfJava</a>
+        <img src="icons/arrow_down.png" alt="Arrow down" class="arrow-down">
+      </div>
+    </div>
+  </div>
+
+  <!-- Второй блок (Преимущества/иконки) -->
+  <section class="features" id="features">
+    <h2 class="features-title">
+      We offer high-quality training for everyone who wants to become a skilled Java developer.<br>
+      In our coding academy:
+    </h2>
+  
+    <!-- Сетка из четырёх карточек (2×2) -->
+    <div class="features-grid">
+      <div class="feature-item">
+        <img src="icons/experiences.png" alt="Feature 1" class="feature-icon">
+        <p class="feature-text">We have been training Java developers of all levels for over 10 years.</p>
+      </div>
+      <div class="feature-item">
+        <img src="icons/line-chart.png" alt="Feature 2" class="feature-icon">
+        <p class="feature-text">We offer flexible class schedules, including evening and weekend courses.</p>
+      </div>
+      <div class="feature-item">
+        <img src="icons/vehicle.png" alt="Feature 3" class="feature-icon">
+        <p class="feature-text">We provide the educational process using modern, efficient, and industry-standard development tools.</p>
+      </div>
+      <div class="feature-item">
+        <img src="icons/price-tag.png" alt="Feature 4" class="feature-icon">
+        <p class="feature-text">We strive to make high-quality education accessible to everyone.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Третий блок (Our courses) -->
+  <section class="courses">
+    <h2 class="courses-title">Our courses</h2>
+    <div class="courses-grid">
+      <!-- Java Course 1 -->
+      <div class="course-item">
+        <img src="icons/java (3).png" alt="Java Course 1" class="course-icon">
+        <div class="course-info">
+          <h3>Java Course #1</h3>
+          <p>Course duration: 3-4 months<br>
+             Cost: $1,000<br>
+             Includes:<br>
+             35 hours of theory<br>
+             50 hours of hands-on coding practice<br>
+             Training on real-world Java applications and frameworks<br>
+             Preparation for the certification exam
+          </p>
+        </div>
+      </div>
+      <!-- Java Course 2 -->
+      <div class="course-item">
+        <img src="icons/java-logo.png" alt="Java Course 2" class="course-icon">
+        <div class="course-info">
+          <h3>Java Course #2</h3>
+          <p>Course duration: 3 months<br>
+             Cost: $600<br>
+             Includes:<br>
+             30 hours of theory<br>
+             40 hours of hands-on coding practice<br>
+             Special lessons on building scalable Java applications<br>
+             Preparation for the certification exam
+          </p>
+        </div>
+      </div>
+      <!-- Java Course 3 -->
+      <div class="course-item">
+        <img src="icons/java (1).png" alt="Java Course 3" class="course-icon">
+        <div class="course-info">
+          <h3>Java Course #3</h3>
+          <p>Course duration: 1.5 months<br>
+             Cost: $450<br>
+             Includes:<br>
+             15 hours of theory<br>
+             25 hours of hands-on coding practice<br>
+             Fundamentals of Java programming<br>
+             Preparation for certification exams
+          </p>
+        </div>
+      </div>
+      <!-- Java Course 4 -->
+      <div class="course-item">
+        <img src="icons/java (2).png" alt="Java Course 4" class="course-icon">
+        <div class="course-info">
+          <h3>Java Course #4</h3>
+          <p>Course duration: 2 months<br>
+             Cost: $850<br>
+             Includes:<br>
+             20 hours of theory<br>
+             30 hours of hands-on coding practice<br>
+             Preparation for Java certification exams<br>
+             Individual lessons for accelerated learning
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Четвёртый блок (Feedback) -->
+  <section class="feedback">
+    <h2 class="feedback-title">Feedback from Our Students</h2>
+    <p class="feedback-subtitle">Our graduates share their impressions</p>
+    <div class="feedback-grid">
+      <!-- Первый отзыв -->
+      <div class="feedback-item">
+        <img src="icons/profile_man.png" alt="Maxik" class="feedback-avatar">
+        <h3 class="feedback-name">Maxik, 12 years old</h3>
+        <p class="feedback-text">
+          "I always doubted that I could learn Java, but this course helped me believe in myself.
+          The lessons were extremely useful, and the instructors were true professionals."
+        </p>
+      </div>
+      <!-- Второй отзыв -->
+      <div class="feedback-item">
+        <img src="icons/profile_woman.png" alt="Ivan" class="feedback-avatar">
+        <h3 class="feedback-name">Ivan, 19 years old</h3>
+        <p class="feedback-text">
+          "The training was great! The instructor was always supportive and provided valuable guidance.
+          It was nice that everything was professional and stress-free."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Пятый блок (Контакты) -->
+  <section class="contacts">
+    <h2 class="contacts-title">Our contacts</h2>
+    <div class="contacts-content">
+      <!-- Замените картинку по желанию, здесь оставлена старая -->
+      <img src="img/car_standing.jpg" alt="Java School Image" class="contacts-car">
+
+      <div class="contacts-info">
+        <p><strong>Address:</strong> 123 Java Street, Tech City, 56789</p> 
+        <img src="icons/map.png" alt="google_map" class="contacts-icons">
+        <p><strong>Telephone:</strong> +372 5555 555</p> 
+        <img src="icons/phone-call.png" alt="telephone" class="contacts-icons">
+        <p><strong>Email:</strong> java@gmail.com</p> 
+        <img src="icons/email.png" alt="email" class="contacts-icons">
+      </div> 
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">Terms of Use</a>
+    </div>
+    <div class="social-media">
+      <img src="icons/facebook.png" alt="Facebook" class="social-icon">
+      <img src="icons/instagram.png" alt="Instagram" class="social-icon">
+      <img src="icons/telegram.png" alt="telegram" class="social-icon">
+      <img src="icons/youtube.png" alt="youtube" class="social-icon">
+    </div>
+    <div class="footer-copy">
+      © 2025 [Eesti Java] - All rights reserved
+    </div>
+  </footer>
+</body> 
+</html>

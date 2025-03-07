@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud Atlas Movie</title>
+    <meta name="description" content="CinemaBase - a movie portal" />
+    <meta name="keywords" content="movies, watch movies online, hd" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+        <header>
+            <div class="logo">
+                <div class="logo_text">
+                    <h1><a href="index eng.html">CinemaBase</a></h1>
+                    <h2>Movies are our passion!</h2>
+                </div>
+            </div>
+
+            <nav class="menubar">
+                <ul class="menu">
+                    <li><a href="index eng.html">Home</a></li>
+                    <li class="selected"><a href="films eng.html">Movies</a></li>
+                    <li><a href="serials eng.html">Series</a></li>
+                    <li><a href="rating eng.html">Movie Ratings</a></li>
+                    <li><a href="contact eng.html">Contact</a></li>
+                    <li class="selected"><a href="cloud.html">ru</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="site_content">
+            <aside class="sidebar_container">
+                <section class="sidebar">
+                    <h2>Search</h2>
+                    <form method="post" action="#" id="search_form">
+                        <input type="search" name="search_field" placeholder="your query" />
+                        <input type="submit" class="btn" value="search" />
+                    </form>
+                </section>
+
+                <section class="sidebar">
+                    <h2>Login</h2>
+                    <form method="post" action="#" id="login">
+                        <input type="text" name="login_field" placeholder="username" required />
+                        <input type="password" name="password_field" placeholder="password" required />
+                        <input type="submit" class="btn" value="login" />
+                        <div class="labels_password_text">
+                            <span><a href="#">forgot password?</a></span> | <span><a href="#">register</a></span>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="sidebar">
+                    <h2>News</h2>
+                    <span>31.02.2018</span>
+                    <p>We launched an advanced search</p>
+                    <a href="#">read</a>
+                </section>
+
+                <section class="sidebar">
+                    <h2>Movie Ratings</h2>
+                    <ul>
+                        <li><a href="show eng.html">Interstellar</a><span class="rating_sidebar">8.1</span></li>
+                        <li><a href="matrix eng.html">The Matrix</a><span class="rating_sidebar">8.0</span></li>
+                        <li><a href="max eng.html">Mad Max</a><span class="rating_sidebar">7.5</span></li>
+                        <li><a href="cloud eng.html">Cloud Atlas</a><span class="rating_sidebar">7.4</span></li>
+                    </ul>
+                </section>
+            </aside>
+
+            <main class="content">
+                <h1>Cloud Atlas</h1>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/R5KHoE_8dgo?showinfo=0" frameborder="0" allowfullscreen></iframe>
+                
+                <div class="info_film_page">
+                    <span class="label">Rating: </span><span class="value">7.8 / 10</span><br>
+                    <span class="label">Year: </span><span class="value">2012</span><br>
+                    <span class="label">Directors: </span><span class="value">Lana Wachowski, Tom Tykwer, Lilly Wachowski</span>
+                </div>
+                
+                <hr>
+                <h2>Description</h2>
+                <div class="description_film">
+                    <img src="cloud.png" alt="Cloud Atlas" />
+                    <p>Six stories—five reincarnations—happening at different times, closely interwoven with each other.</p>
+                </div>
+
+                <hr>
+                <h2>Reviews</h2>
+                <div class="reviews">
+                    <div class="review">
+                        <strong>Sergey:</strong>
+                        <p>Great movie, the 3 hours flew by unnoticed.</p>
+                    </div>
+                    <div class="review">
+                        <strong>Dmitry:</strong>
+                        <p>After watching Inception, I eagerly awaited more works from Christopher Nolan. Interstellar impressed me.</p>
+                    </div>
+                </div>
+
+                <div class="send">
+                    <h3>Leave a review</h3>
+                    <form method="post" action="#" id="review">
+                        <input type="text" name="review_name" placeholder="your name" required>
+                        <textarea name="review_text" placeholder="your review" required></textarea>
+                        <input class="btn" type="submit" value="send">
+                    </form>
+                </div>
+            </main>
+            
+        </div>
+
+        <footer  >
+            <p>
+                <a href="index eng.html">Home</a>
+                <a href="films eng.html">Movies</a>
+                <a href="serials eng.html">Series</a>
+                <a href="rating eng.html">Movie Ratings</a>
+                <a href="contact eng.html">Contact</a>
+            </p>
+            <p>kinopoisk.ru</p>
+        </footer>
+    </div>
+
+</body>
+</html>

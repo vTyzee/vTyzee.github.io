@@ -1,0 +1,161 @@
+/* Общие стили */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стиль для HTML и Body */
+html, body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; /* Уменьшено для лучшей адаптивности */
+    color: #ffffff;
+    background: #27353f;
+    height: 100%; /* Важный элемент для Flexbox */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox для фиксации футера */
+    flex-direction: column; /* Устанавливаем вертикальное направление */
+    background-image: url('photoforwallpappers.png'); /* Картинка для ПК */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Header стили */
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(50, 53, 63, 0.6); /* Прозрачный фон для читаемости */
+    font-size: 2em;
+    color: #3ae9bd;
+}
+
+/* Основной раздел */
+main {
+    padding: 20px;
+    flex: 1; /* Этот элемент занимает оставшееся пространство */
+}
+
+/* Карточки проектов */
+.card {
+    background-color: rgba(39, 53, 63, 0.9);
+    border: 1px solid #6751ca;
+    border-radius: 10px;
+    color: #ffffff;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    color: #7ee4b4;
+}
+
+.card-text {
+    color: #ffffff;
+}
+
+.card a.btn-primary {
+    background-color: #4237a7;
+    border-color: #4237a7;
+}
+
+.card a.btn-primary:hover {
+    background-color: #378035;
+    border-color: #917e7d;
+}
+
+/* Footer */
+footer {
+    background: transparent !important; /* Убираем серый цвет полностью */
+    color: #ffffff; /* Белый цвет текста */
+    text-align: center;
+    padding: 1.5rem; /* Увеличиваем отступы */
+    font-size: 1.1em; /* Увеличиваем размер текста */
+    margin-top: auto;
+    position: relative; /* Изменено с absolute */
+    bottom: auto; /* Убираем фиксированное положение */
+    width: 100%;
+    z-index: 10;
+}
+
+/* Ссылки в футере */
+footer a {
+    color: #ff574c;
+    text-decoration: none;
+    font-size: 1.2em; /* Увеличиваем размер ссылки */
+}
+
+footer a:hover {
+    color: #ff776c;
+    text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    html, body {
+        background-image: none; /* Убираем фон на мобильной версии */
+        background-color: #27353f; /* Устанавливаем однотонный цвет вместо картинки */
+    }
+
+    footer {
+        font-size: 1.2em; /* Еще больше увеличиваем текст на мобильных */
+        padding: 1.5rem; /* Сохраняем отступы для гармоничности */
+        background: transparent !important; /* Полностью убираем серый цвет */
+    }
+}
+
+@media (max-width: 480px) {
+    html, body {
+        font-size: 14px; /* Уменьшение базового размера шрифта на очень маленьких экранах */
+        background-image: none; /* Убираем фон на очень маленьких экранах */
+        background-color: #27353f; /* Цвет фона для мобильных устройств */
+    }
+
+    header {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 1em;
+        padding: 0.5rem;
+        background: transparent !important; /* Прозрачность аналогична десктопной версии */
+    }
+
+    .card-title {
+        font-size: 1.2em;
+    }
+
+    .card a.btn-primary {
+        padding: 6px 12px;
+    }
+}
+
+/* Карточки проектов */
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%; /* Карточки занимают всю ширину на мобильных */
+        padding: 10px;
+        margin-bottom: 20px; /* Добавляем отступ снизу между карточками */
+    }
+
+    .card-title {
+        font-size: 1.3em;
+    }
+
+    .card-text {
+        margin-bottom: 10px;
+    }
+
+    .card a.btn-primary {
+        padding: 8px 16px;
+    }
+}

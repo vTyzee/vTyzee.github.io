@@ -1,0 +1,455 @@
+/* Сброс базовых стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  color: #444; /* Немного светлее/темнее */
+  scroll-behavior: smooth;
+}
+
+/* --- Первый блок (Hero) --- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('img/cardriving.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.45); /* Чуть темнее слой */
+  z-index: 1;
+}
+
+.lang-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  background-color: #CD5C5C; /* Изменили цвет */
+  color: #fff;
+  font-weight: 300;
+  font-size: 30px;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.lang-btn:hover {
+  background-color: #b64a4a;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+  max-width: 900px;
+  color: #faebd7; /* Изменили цвет подложки */
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Добавили лёгкую тень для оригинальности */
+}
+
+.hero-subtitle {
+  font-weight: 300;
+  font-size: 35px;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 35px;
+  color: #fff;
+  background-color: #CD5C5C; /* Изменили цвет */
+  padding: 0.5rem 1.5rem;
+  border-radius: 40px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 2rem;
+}
+.btn-primary:hover {
+  background-color: #b04949;
+}
+
+/* Блок "Learn more" */
+.learn-more {
+  margin-top: 50px;
+  text-align: center;
+}
+.learn-more a {
+  display: inline-block;
+  font-weight: 200;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+.learn-more a:hover {
+  text-decoration: underline;
+}
+.arrow-down {
+  display: block;
+  width: 28px; /* Увеличили размер */
+  height: auto;
+  margin: 0 auto;
+}
+
+
+/* --- Второй блок (Features) --- */
+.features {
+  width: 100%;
+  padding: 3rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+.features-title {
+  font-size: 30px;
+  font-weight: 550;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  column-gap: 17.5rem;
+  row-gap: 2rem;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  background-color: #fefefe;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05); /* Лёгкая тень */
+}
+.feature-icon {
+  width: 115px;
+  height: auto;
+}
+.feature-text {
+  font-size: 21px; /* Чуть уменьшили */
+  font-weight: 500; /* Чуть снизили, было 501 */
+  line-height: 1.4;
+  max-width: 400px;
+}
+
+
+/* --- Третий блок (Our courses) --- */
+.courses {
+  width: 100%;
+  padding: 3rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+.courses-title {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.courses-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.course-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
+  background-color: #fefefe;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05); /* Добавили тень */
+}
+.course-icon {
+  width: 85px;
+  height: auto;
+  margin-top: 5px;
+}
+.course-info h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.course-info p {
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+
+/* --- Четвёртый блок (Feedback) --- */
+.feedback {
+  width: 100%;
+  padding: 4rem 2rem; 
+  background-color: #fff;
+  text-align: center;
+}
+.feedback-title {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.feedback-subtitle {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+.feedback-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.feedback-item {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.feedback-avatar {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.feedback-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.feedback-text {
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+
+/* --- Пятый блок (Contacts) --- */
+.contacts {
+  width: 100%;
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+.contacts-title {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.contacts-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.contacts-car {
+  width: 625px;
+  height: auto;
+  border-radius: 8px;
+}
+.contacts-info {
+  text-align: left;
+  max-width: 500px;
+}
+.contacts-info p {
+  font-size: 25px;
+  margin-bottom: 1rem;
+}
+.contacts-icons {
+  width: 70px;
+  margin-left: 15px;
+}
+
+/* --- Footer --- */
+.footer {
+  width: 100%;
+  background-color: #000;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.footer-links {
+  margin-bottom: 1rem;
+}
+.footer-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  margin: 0 0.5rem;
+  text-decoration: underline;
+}
+.social-media {
+  margin-bottom: 1rem;
+}
+.social-icon {
+  width: 35px;
+  height: auto;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+.footer-copy {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* --- Адаптив для мобильных устройств (max-width: 768px) --- */
+@media (max-width: 768px) {
+  .lang-btn {
+    font-size: 20px;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    top: 10px;
+    right: 10px;
+  }
+
+  /* Hero */
+  .hero-title {
+    font-size: 32px;
+  }
+  .hero-subtitle {
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+  }
+  .btn-primary {
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+  }
+  .learn-more {
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .learn-more a {
+    font-size: 16px;
+  }
+  .arrow-down {
+    width: 20px;
+  }
+
+  /* Features */
+  .features {
+    padding: 1.5rem;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  .feature-item {
+    text-align: left;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .feature-text {
+    max-width: none;
+    font-size: 18px;
+  }
+  .feature-icon {
+    width: 70px;
+  }
+
+  /* Courses */
+  .courses-title {
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+  }
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .course-icon {
+    width: 60px;
+  }
+  .course-info h3 {
+    font-size: 18px;
+  }
+  .course-info p {
+    font-size: 14px;
+  }
+
+  /* Feedback */
+  .feedback-title {
+    font-size: 24px;
+  }
+  .feedback-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .feedback-item {
+    padding: 1rem;
+  }
+  .feedback-avatar {
+    width: 60px;
+  }
+  .feedback-name {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+  }
+  .feedback-text {
+    font-size: 14px;
+  }
+
+  /* Contacts */
+  .contacts-title {
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+  }
+  .contacts-content {
+    flex-direction: column;
+  }
+  .contacts-car {
+    width: 100%;
+    max-width: 400px;
+  }
+  .contacts-info p {
+    font-size: 18px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 1rem 0.5rem;
+  }
+  .footer-links a {
+    font-size: 12px;
+  }
+  .social-icon {
+    width: 24px;
+    margin: 0 0.3rem;
+  }
+  .footer-copy {
+    font-size: 12px;
+  }
+}
