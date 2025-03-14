@@ -1,0 +1,297 @@
+/* Сброс базовых отступов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Шрифт Montserrat */
+  font-family: 'Montserrat', sans-serif;
+  background-color: #1b1b1b; /* Тёмный общий фон */
+  color: #fff;
+  /* Увеличим line-height, чтобы текст был более воздушным */
+  line-height: 1.8;
+}
+
+/* ШАПКА */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  padding: 1rem 2rem;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-weight: 700; /* полужирное начертание Montserrat */
+  font-size: 1.5rem;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: 400;
+}
+
+.header nav ul li a:hover {
+  color: #ff9900;
+}
+
+/* HERO */
+.hero {
+  background: url("img/hero-bg.png") center/cover no-repeat;
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.btn-cta {
+  display: inline-block;
+  background-color: #ff9900;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: #e68a00;
+}
+
+/* ОБЩИЕ СЕКЦИИ */
+section {
+  width: 100%;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* WHY CHOOSE US */
+.why-choose-us {
+  background:
+    linear-gradient(rgba(27, 27, 27, 0.7), rgba(27, 27, 27, 0.7)),
+    url("img/") center/cover no-repeat;
+  min-height: 400px;
+}
+
+.why-choose-us p {
+  margin-bottom: 1rem;
+}
+
+/* CHOOSE YOUR PLAN */
+.plans {
+  background:
+    linear-gradient(rgba(27, 27, 27, 0.7), rgba(27, 27, 27, 0.7)),
+    url("img/why-bg.png") center/cover no-repeat;
+  min-height: 500px;
+}
+
+.plans-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.plan-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  width: 250px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.plan-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.plan-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #ff9900;
+  font-weight: 700;
+}
+
+.plan-card p {
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.plan-card button {
+  background-color: #ff9900;
+  border: none;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.plan-card button:hover {
+  background-color: #e68a00;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  background: url("img/testimonial-bg.jpg") center/cover no-repeat;
+  min-height: 400px;
+  position: relative;
+}
+
+.testimonials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 5px;
+  max-width: 400px;
+  text-align: left;
+  font-weight: 400;
+}
+
+/* CONTACT */
+.contact {
+  background: url("img/contact-bg.jpg") center/cover no-repeat;
+  min-height: 600px;
+  position: relative;
+}
+
+.contact-info {
+  margin-bottom: 2rem;
+}
+
+.fox-logo {
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  font-weight: 400;
+}
+
+/* ФОРМА */
+form {
+  display: inline-block;
+  text-align: left;
+  max-width: 400px;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 3px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+form button {
+  background-color: #ff9900;
+  border: none;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #e68a00;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #111;
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.footer-links {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 400;
+}
+
+.footer-links a:hover {
+  color: #ff9900;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  color: #ccc;
+  font-weight: 400;
+}
