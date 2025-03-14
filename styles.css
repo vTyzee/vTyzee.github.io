@@ -1,47 +1,33 @@
-/* Сброс базовых отступов/полей и box-sizing */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Базовые стили для html и body */
 html, body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: #ffffff;
-
-    /* Градиентный оверлей + картинка */
-    background: linear-gradient(
-                  to top right, 
-                  rgba(39, 53, 63, 0.8), 
-                  rgba(50, 53, 63, 0.8)
-                ),
-                url('photoforwallpappers.png');
+    background: linear-gradient(to top right, rgba(39, 53, 63, 0.8), rgba(50, 53, 63, 0.8)), url('photoforwallpappers.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-    min-height: 100vh; 
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* Выделяем заголовки другой семьёй шрифтов (Montserrat) */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Шапка сайта (header) */
 header {
     background-color: transparent;
 }
 
 header h1 {
     color: #3ae9bd;
-    text-shadow: 0 0 8px rgba(58, 233, 189, 0.7), 
-                 0 0 15px rgba(58, 233, 189, 0.5);
-    /* Небольшая анимация появления */
+    text-shadow: 0 0 8px rgba(58, 233, 189, 0.7), 0 0 15px rgba(58, 233, 189, 0.5);
     animation: fadeInDown 1s ease;
 }
 
@@ -56,21 +42,20 @@ header h1 {
     }
 }
 
-/* Основная часть (main) тянется на всё оставшееся пространство */
 main {
-    flex: 1; 
+    flex: 1;
     padding: 20px;
 }
 
-/* Карточки проектов */
 .project-card {
-    background-color: rgba(39, 53, 63, 0.5);  /* полупрозрачный фон */
-    backdrop-filter: blur(5px);               /* эффект размытия фона */
+    background-color: rgba(39, 53, 63, 0.5);
+    backdrop-filter: blur(5px);
     border: 1px solid #3ae9bd;
     border-radius: 10px;
     color: #ffffff;
     transition: transform 0.3s, box-shadow 0.3s;
     min-height: 220px;
+    margin: 0 auto;
 }
 
 .project-card:hover {
@@ -88,28 +73,18 @@ main {
     margin-bottom: 1rem;
 }
 
-/* Кнопки */
 .btn-primary {
-    background: linear-gradient(
-                to bottom right, 
-                #3ae9bd, 
-                #2fc99a
-               );
+    background: linear-gradient(to bottom right, #3ae9bd, #2fc99a);
     border: none;
     color: #27353f;
     transition: background 0.3s, transform 0.3s;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(
-                to bottom right, 
-                #4df1c9, 
-                #3fddab
-               );
+    background: linear-gradient(to bottom right, #4df1c9, #3fddab);
     transform: translateY(-2px);
 }
 
-/* Футер */
 footer {
     color: #ffffff;
     text-align: center;
@@ -129,6 +104,7 @@ footer a#mailme {
     border-color: #ffffff;
     color: #ffffff;
     transition: background 0.3s, color 0.3s;
+    margin: 0.5rem;
 }
 
 footer a#mailme:hover {
@@ -136,17 +112,47 @@ footer a#mailme:hover {
     color: #27353f;
 }
 
-/* Адаптивные правила */
+footer a.btn.btn-outline-light {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+footer a.btn.btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #27353f;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #3ae9bd;
+}
+
+.nav-tabs .nav-link {
+    color: #7ee4b4;
+    border: 1px solid transparent;
+    background-color: transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #ffffff;
+    background-color: rgba(39, 53, 63, 0.5);
+}
+
+.nav-tabs .nav-link.active {
+    color: #ffffff;
+    background-color: rgba(39, 53, 63, 0.8);
+    border-color: #3ae9bd #3ae9bd transparent;
+}
+
 @media (max-width: 768px) {
     html, body {
-        background-image: none; 
+        background-image: none;
         background-color: #27353f;
     }
-
     header h1 {
         font-size: 1.6rem;
     }
-
     footer {
         font-size: 1.2em;
     }
@@ -158,28 +164,22 @@ footer a#mailme:hover {
         background-image: none;
         background-color: #27353f;
     }
-
     header h1 {
         font-size: 1.3rem;
         margin: 10px 0;
     }
-
     main {
         padding: 10px;
     }
-
     .project-card {
-        margin-bottom: 20px; 
+        margin-bottom: 20px;
     }
-
     .project-card .card-title {
         font-size: 1.1rem;
     }
-
     .btn-primary {
         padding: 6px 12px;
     }
-
     footer {
         font-size: 1rem;
         padding: 0.5rem;
