@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EmilximaBoost – Shop</title>
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <a href="index.html"><img src="images/logo.png" alt="EmilximaBoost Logo" class="logo"></a>
+      <div class="mobile-toggle">&#9776;</div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="boosts.html">Boosts</a></li>
+        <li class="nav-item"><a href="shop.html" class="active">Shop</a></li>
+        <li class="nav-item"><a href="reviews.html">Reviews</a></li>
+        <li class="nav-item"><a href="contacts.html">Contacts</a></li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="shop-section container animate-section">
+      <h2>Game Item Shop</h2>
+      <div class="filter">
+        <button class="filter-btn active" data-game="all">All Games</button>
+        <button class="filter-btn" data-game="diablo4">Diablo IV</button>
+        <button class="filter-btn" data-game="r6s">R6 Siege</button>
+        <button class="filter-btn" data-game="destiny2">Destiny 2</button>
+      </div>
+      <div class="product-grid">
+        <div class="product-card" data-game="diablo4">
+          <img src="images/d4_sword.png" alt="Legendary Sword">
+          <div class="card-content">
+            <h3>Legendary Sword – Diablo IV</h3>
+            <p>Legendary sword that increases damage and grants special skills.</p>
+            <div class="price">$49</div>
+            <button class="add-to-cart">Buy</button>
+          </div>
+        </div>
+        <div class="product-card" data-game="diablo4">
+          <img src="images/d4anc.jpg" alt="Ancient Armor">
+          <div class="card-content">
+            <h3>Ancient Armor – Diablo IV</h3>
+            <p>Ancient armor for enhanced defense and health.</p>
+            <div class="price">$35</div>
+            <button class="add-to-cart">Buy</button>
+          </div>
+        </div>
+        <div class="product-card" data-game="r6s">
+          <img src="images/elite.jpg" alt="Elite Skin">
+          <div class="card-content">
+            <h3>Elite Skin – R6 Siege</h3>
+            <p>Exclusive elite operator skin.</p>
+            <div class="price">$20</div>
+            <button class="add-to-cart">Buy</button>
+          </div>
+        </div>
+        <div class="product-card" data-game="r6s">
+          <img src="images/charms.jpg" alt="Weapon Charm">
+          <div class="card-content">
+            <h3>Weapon Charm – R6 Siege</h3>
+            <p>Collectible charm for your weapon.</p>
+            <div class="price">$5</div>
+            <button class="add-to-cart">Buy</button>
+          </div>
+        </div>
+        <div class="product-card" data-game="destiny2">
+          <img src="images/exo.jpg" alt="Exotic Rifle">
+          <div class="card-content">
+            <h3>Exotic Rifle – Destiny 2</h3>
+            <p>Exotic rifle with unique effects.</p>
+            <div class="price">$40</div>
+            <button class="add-to-cart">Buy</button>
+          </div>
+        </div>
+        <div class="product-card" data-game="destiny2">
+          <img src="images/d2_armor.png" alt="Legendary Armor">
+          <div class="card-content">
+            <h3>Legendary Armor – Destiny 2</h3>
+            <p>Legendary Guardian armor set.</p>
+            <div class="price">$30</div>
+            <button class="add-to-cart">Buy</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 EmilximaBoost</p>
+      <p><a href="contacts.html">Contact Us</a></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

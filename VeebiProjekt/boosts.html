@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EmilximaBoost – Boosts</title>
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <a href="index.html"><img src="images/logo.png" alt="EmilximaBoost Logo" class="logo"></a>
+      <div class="mobile-toggle">&#9776;</div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="boosts.html" class="active">Boosts</a></li>
+        <li class="nav-item"><a href="shop.html">Shop</a></li>
+        <li class="nav-item"><a href="reviews.html">Reviews</a></li>
+        <li class="nav-item"><a href="contacts.html">Contacts</a></li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container animate-section">
+      <h2>Our Boosting Services</h2>
+      <!-- Game filter for boosts -->
+      <div class="filter">
+        <button class="filter-btn active" data-game="all">All Games</button>
+        <button class="filter-btn" data-game="diablo4">Diablo IV</button>
+        <button class="filter-btn" data-game="r6s">R6 Siege</button>
+        <button class="filter-btn" data-game="destiny2">Destiny 2</button>
+      </div>
+      <div class="product-grid">
+        <!-- Diablo 4 -->
+        <div class="product-card" data-game="diablo4">
+          <img src="images/d4.jpg" alt="Level 1–50">
+          <div class="card-content">
+            <h3>Level 1–50</h3>
+            <p>Level boost from 1 to 50.</p>
+            <div class="price">$50</div>
+            <button class="add-to-cart">Buy</button>
+          </div>
+        </div>
+        <div class="product-card" data-game="diablo4">
+          <img src="images/paragon.jpg" alt="Paragon Farm">
+          <div class="card-content">
+            <h3>Paragon Farm</h3>
+            <p>Farm 100 Paragon points.</p>
+            <div class="price">$45</div>
+            <button class="add-to-cart">Buy</button>
+          </div>
+        </div>
+        <!-- R6 Siege -->
+        <div class="product-card" data-game="r6s">
+          <img src="images/r6s.jpg" alt="Rank Boost">
+          <div class="card-content">
+            <h3>Rank Boost</h3>
+            <p>Increase rank to Diamond.</p>
+            <div class="price">$40</div>
+            <button class="add-to-cart">Buy</button>
+          </div>
+        </div>
+        <div class="product-card" data-game="r6s">
+          <img src="images/r6lvl.jpg" alt="Leveling">
+          <div class="card-content">
+            <h3>Leveling</h3>
+            <p>Level your account up to 100.</p>
+            <div class="price">$35</div>
+            <button class="add-to-cart">Buy</button>
+          </div>
+        </div>
+        <!-- Destiny 2 -->
+        <div class="product-card" data-game="destiny2">
+          <img src="images/d2.jpg" alt="Gear Farm">
+          <div class="card-content">
+            <h3>Gear Farm</h3>
+            <p>Collect 5 legendary items.</p>
+            <div class="price">$45</div>
+            <button class="add-to-cart">Buy</button>
+          </div>
+        </div>
+        <div class="product-card" data-game="destiny2">
+          <img src="images/d2raid.jpg" alt="Raid Completion">
+          <div class="card-content">
+            <h3>Raid Completion</h3>
+            <p>Complete Leviathan and Vow raids.</p>
+            <div class="price">$60</div>
+            <button class="add-to-cart">Buy</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Modal Overlay -->
+<div id="order-modal" class="modal-overlay hidden">
+  <div class="modal">
+    <button class="modal-close">&times;</button>
+    <h2>Place Your Order</h2>
+    <form id="order-modal-form">
+      <div class="form-group">
+        <label for="modal-name">Name / Nick</label>
+        <input type="text" id="modal-name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="modal-email">Email</label>
+        <input type="email" id="modal-email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="modal-notes">Additional Info</label>
+        <textarea id="modal-notes" name="notes" rows="3"></textarea>
+      </div>
+      <button type="submit" class="cta-btn">Confirm Purchase</button>
+    </form>
+  </div>
+</div>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 EmilximaBoost</p>
+      <p><a href="contacts.html">Contact Us</a></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

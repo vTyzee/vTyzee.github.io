@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EmilximaBoost – Cart</title>
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <a href="index.html"><img src="images/logo.png" alt="EmilximaBoost Logo" class="logo"></a>
+      <div class="mobile-toggle">&#9776;</div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="boosts.html">Boosts</a></li>
+        <li class="nav-item"><a href="shop.html">Shop</a></li>
+        <li class="nav-item"><a href="cart.html" class="active">Cart</a></li>
+        <li class="nav-item"><a href="reviews.html">Reviews</a></li>
+        <li class="nav-item"><a href="contacts.html">Contacts</a></li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container animate-section">
+      <h2>Your Cart</h2>
+      <table class="cart-table">
+        <thead>
+          <tr><th>Item</th><th>Price</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Diablo 4 Level Boost</td><td>$50</td></tr>
+          <tr><td>Elite Skin – R6 Siege</td><td>$20</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td>Total:</td><td>$70</td></tr>
+        </tfoot>
+      </table>
+
+      <form class="order-form">
+        <h3>Checkout</h3>
+        <label for="name">Name / Nickname</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="notes">Additional Information</label>
+        <textarea id="notes" name="notes" rows="4"></textarea>
+        <button type="submit">Place Order</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 EmilximaBoost</p>
+      <p><a href="contacts.html">Contact Us</a></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

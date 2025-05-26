@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EmilximaBoost – Home</title>
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-container">
+      <a href="index.html"><img src="images/logo.png" alt="EmilximaBoost Logo" class="logo"></a>
+      <div class="mobile-toggle">&#9776;</div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li class="nav-item"><a href="index.html" class="active">Home</a></li>
+        <li class="nav-item"><a href="boosts.html">Boosts</a></li>
+        <li class="nav-item"><a href="shop.html">Shop</a></li>
+        <li class="nav-item"><a href="reviews.html">Reviews</a></li>
+        <li class="nav-item"><a href="contacts.html">Contacts</a></li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero animate-section">
+    <div class="hero-content">
+      <h1>Welcome to EmilximaBoost</h1>
+      <p>Premium boosting and in-game item trading for true pros.</p>
+      <button class="cta-btn" onclick="location.href='boosts.html'">Order a Boost</button>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services-section" class="services container">
+    <h2>Our Boosting Services</h2>
+    <div class="filter">
+      <button class="filter-btn active" data-game="all">All Games</button>
+      <button class="filter-btn" data-game="diablo4">Diablo IV</button>
+      <button class="filter-btn" data-game="r6s">R6 Siege</button>
+      <button class="filter-btn" data-game="destiny2">Destiny 2</button>
+    </div>
+    <div class="product-grid">
+      <div class="product-card" data-game="diablo4">
+        <img src="images/d4.jpg" alt="Diablo 4 Level Boost">
+        <div class="card-content">
+          <h3>Diablo 4 Level Boost</h3>
+          <p>Leveling from level 1 to 50.</p>
+          <div class="price">$50</div>
+          <button class="add-to-cart" onclick="location.href='boosts.html'">Order</button>
+        </div>
+      </div>
+      <div class="product-card" data-game="r6s">
+        <img src="images/r6s.jpg" alt="R6 Siege Rank Boost">
+        <div class="card-content">
+          <h3>R6 Siege Rank Boost</h3>
+          <p>Rank up to Diamond.</p>
+          <div class="price">$40</div>
+          <button class="add-to-cart" onclick="location.href='boosts.html'">Order</button>
+        </div>
+      </div>
+      <div class="product-card" data-game="destiny2">
+        <img src="images/d2.jpg" alt="Destiny 2 Raid Completion">
+        <div class="card-content">
+          <h3>Destiny 2 Raid Completion</h3>
+          <p>Completion of Leviathan and Vow raids.</p>
+          <div class="price">$60</div>
+          <button class="add-to-cart" onclick="location.href='boosts.html'">Order</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials container animate-section">
+    <h2>What Our Clients Say</h2>
+    <div class="reviews product-grid">
+      <div class="product-card">
+        <h3>Player123</h3>
+        <p>★★★★★</p>
+        <p>Amazing speed and security!</p>
+      </div>
+      <div class="product-card">
+        <h3>GamerQueen</h3>
+        <p>★★★★☆</p>
+        <p>Best R6 Siege boosting service.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 EmilximaBoost</p>
+      <p><a href="contacts.html">Contact Us</a></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EmilximaBoost – Reviews</title>
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Disable scrolling on the reviews page */
+    html, body {
+      overflow: hidden;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .reviews-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 4rem);
+      gap: 2rem;
+      width: 100%;
+      box-sizing: border-box;
+      padding-top: 2rem;
+    }
+    .review-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      width: 90%;
+      max-width: 1000px;
+    }
+    .review-card {
+      background: var(--card-bg);
+      border-left: 4px solid var(--accent-orange);
+      padding: 1rem;
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .review-card h3 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+    .review-card .rating {
+      font-size: 1rem;
+      color: var(--accent-blue);
+    }
+    .review-card .service {
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--fg);
+    }
+    /* Footer is now static without absolute positioning */
+    footer {
+      background: #111;
+      padding: 1rem 0;
+    }
+    footer .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <a href="index.html"><img src="images/logo.png" alt="EmilximaBoost Logo" class="logo"></a>
+      <div class="mobile-toggle">&#9776;</div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="boosts.html">Boosts</a></li>
+        <li class="nav-item"><a href="shop.html">Shop</a></li>
+        <li class="nav-item"><a href="reviews.html" class="active">Reviews</a></li>
+        <li class="nav-item"><a href="contacts.html">Contacts</a></li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="reviews-container animate-section">
+    <h2>Customer Reviews</h2>
+    <div class="review-cards">
+      <div class="review-card">
+        <h3>Player123</h3>
+        <p class="rating">★★★★★</p>
+        <p class="service">Service: Diablo 4 Level Boost</p>
+        <p>Incredibly fast and secure!</p>
+      </div>
+      <div class="review-card">
+        <h3>GamerQueen</h3>
+        <p class="rating">★★★★☆</p>
+        <p class="service">Service: R6 Siege Rank Boost</p>
+        <p>The best boosting for R6 Siege.</p>
+      </div>
+      <div class="review-card">
+        <h3>RaidMaster</h3>
+        <p class="rating">★★★★★</p>
+        <p class="service">Service: Destiny 2 Raid Completion</p>
+        <p>Destiny 2 raids completed flawlessly.</p>
+      </div>
+      <div class="review-card">
+        <h3>SpeedyGamer</h3>
+        <p class="rating">★★★★★</p>
+        <p class="service">Service: Diablo 4 Paragon Farm</p>
+        <p>They farmed the required paragon points extremely fast.</p>
+      </div>
+      <div class="review-card">
+        <h3>StealthNinja</h3>
+        <p class="rating">★★★★☆</p>
+        <p class="service">Service: R6 Siege Leveling</p>
+        <p>Great leveling speed, highly recommend.</p>
+      </div>
+      <div class="review-card">
+        <h3>LegendaryLooter</h3>
+        <p class="rating">★★★★★</p>
+        <p class="service">Service: Destiny 2 Gear Farm</p>
+        <p>Collected all legendary gear without any issues.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 EmilximaBoost</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
